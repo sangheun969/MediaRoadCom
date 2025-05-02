@@ -13,7 +13,7 @@ const SlideMenu: React.FC<SlideMenuProps> = ({ isOpen, toggleMenu }) => {
       } z-40`}
     >
       <nav className="h-[100vh] flex flex-col justify-center mt-12 space-y-6 gap-8 text-4xl p-6 bg-white">
-        <a href="#" onClick={toggleMenu} className="hover:text-blue-500 ">
+        <a href="/intro" onClick={toggleMenu} className="hover:text-blue-500 ">
           회사소개
         </a>
         <a href="#" onClick={toggleMenu} className="hover:text-blue-500">
