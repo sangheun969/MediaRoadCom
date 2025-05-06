@@ -2,7 +2,7 @@ import React from "react";
 
 const FootInfor: React.FC = () => {
   return (
-    <div className="flex flex-col py-2">
+    <div className="flex flex-col py-2 mt-[200px]">
       <div className="border-y-4 p-9">
         <img
           src="/images/mediaLogo.png"

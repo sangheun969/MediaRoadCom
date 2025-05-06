@@ -12,7 +12,7 @@ const Main: React.FC = () => {
         <MainCom2 />
         <MainCom3 />
       </div>
-      <div className="w-full h-full">
+      <div className="w-full h-[100vh] mt-[200px]">
         <BusinessIntro />
       </div>
     </div>

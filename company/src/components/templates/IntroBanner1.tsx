@@ -13,11 +13,11 @@ const IntroBanner1: React.FC = () => {
   }, []);
 
   return (
-    <div className="relative flex flex-col justify-around p-11 w-full h-[100vh] overflow-hidden transition-all duration-700">
+    <div className="mt-44 flex flex-col w-full h-[120vh] overflow-hidden transition-all duration-700">
       <div
-        className={`transition-all duration-700 ease-in-out text-center transform ${
+        className={`transition-all duration-1000 ease-in-out text-center transform ${
           scrolled
-            ? "translate-y-60 text-white"
+            ? "translate-y-[800px] text-white"
             : "translate-y-0 text-black mt-10"
         }`}
       >
@@ -27,8 +27,10 @@ const IntroBanner1: React.FC = () => {
       <img
         src="/images/background7.png"
         alt="intro1"
-        className={`object-cover transition-all duration-700 ease-in-out mx-auto mt-10 ${
-          scrolled ? "w-full h-screen" : "w-[500px] h-[350px]"
+        className={`mt-20 object-cover transition-all duration-1000 ease-in-out mx-auto ${
+          scrolled
+            ? "w-full h-[100vh] rounded-none "
+            : "w-[300px] h-[300px] rounded-full"
         }`}
       />
     </div>
