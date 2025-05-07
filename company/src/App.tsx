@@ -2,7 +2,10 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/templates/Header";
 import Main from "./pages/Main";
 import Intro from "./pages/Intro";
+import SoftwarePage from "./pages/SoftwarePage";
 import Foots from "./components/templates/Foots";
+import CulturePage from "./pages/CulturePage";
+
 function App() {
   return (
     <Router>
@@ -10,6 +13,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/intro" element={<Intro />} />
+        <Route path="/culture" element={<CulturePage />} />
+        <Route path="/software" element={<SoftwarePage />} />
       </Routes>
       <Foots />
     </Router>

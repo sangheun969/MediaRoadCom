@@ -82,13 +82,13 @@ const DiagonalReveal: React.FC = () => {
       />
       <h1
         ref={textRef}
-        className="absolute z-20 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white text-4xl md:text-4xl font-bold tracking-widest transition-opacity duration-500"
+        className="absolute z-20 top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white text-4xl md:text-4xl font-bold tracking-widest transition-opacity duration-500"
       >
-        convergence society
+        Convergence society
       </h1>
       <div
         ref={introTextRef}
-        className="absolute bottom-[300px] p-12 -translate-x-1/2 w-11/12 md:w-2/3 text-white text-lg md:text-xl leading-relaxed opacity-0 translate-y-12 transition-all duration-700 z-20"
+        className="absolute bottom-[300px] p-12 -translate-x-1/2 w-11/12 md:w-2/3 text-white text-lg md:text-2xl leading-relaxed opacity-0 translate-y-12 transition-all duration-700 z-20"
       >
         <p className="mb-4">
           21세기 현대사회를 융합의 사회 혹은 통섭의 사회라 말합니다.

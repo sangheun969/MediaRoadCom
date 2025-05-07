@@ -62,14 +62,14 @@ const Header: React.FC = () => {
           영상콘텐츠
         </a>
         <a
-          href="#"
+          href="/software"
           onClick={(e) => handleNavClick("/software", e)}
           className="relative before:content-[''] before:absolute before:top-[-10px] before:left-1/2 before:-translate-x-1/2 before:w-2 before:h-2 before:rounded-full before:bg-[#8B4513] before:opacity-0 hover:before:opacity-100 before:transition-opacity"
         >
           IT 소프트웨어 개발
         </a>
         <a
-          href="#"
+          href="/culture"
           onClick={(e) => handleNavClick("/culture", e)}
           className="relative  before:content-[''] before:absolute before:top-[-10px] before:left-1/2 before:-translate-x-1/2 before:w-2 before:h-2 before:rounded-full before:bg-[#8B4513] before:opacity-0 hover:before:opacity-100 before:transition-opacity"
         >

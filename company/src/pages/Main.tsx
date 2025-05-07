@@ -6,7 +6,7 @@ import BusinessIntro from "../components/templates/BusinessIntro";
 
 const Main: React.FC = () => {
   return (
-    <div>
+    <>
       <div className="relative h-[300vh]">
         <MainCom1 />
         <MainCom2 />
@@ -15,7 +15,7 @@ const Main: React.FC = () => {
       <div className="w-full h-[100vh] mt-[200px]">
         <BusinessIntro />
       </div>
-    </div>
+    </>
   );
 };
 
