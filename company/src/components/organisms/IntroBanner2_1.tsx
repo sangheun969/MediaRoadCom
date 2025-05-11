@@ -66,7 +66,7 @@ const DiagonalReveal: React.FC = () => {
     >
       <div
         ref={leftRef}
-        className="absolute top-0 left-0 w-1/2 h-full bg-black z-10 transition-transform duration-1000"
+        className="absolute top-0 left-0 w-1/2 h-full bg-[#030303]  z-10 transition-transform duration-1000"
         style={{
           clipPath: "polygon(0 0, 100% 0, 10% 100%, 0% 100%)",
           transform: "translate(0, 0)",
@@ -74,7 +74,7 @@ const DiagonalReveal: React.FC = () => {
       />
       <div
         ref={rightRef}
-        className="absolute top-0 right-0 w-1/2 h-full bg-black z-10 transition-transform duration-1000"
+        className="absolute top-0 right-0 w-1/2 h-full bg-[#030303] z-10 transition-transform duration-1000"
         style={{
           clipPath: "polygon(100% 0, 100% 0, 100% 100%, 100%)",
           transform: "translate(0, 0)",

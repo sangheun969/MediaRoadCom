@@ -5,6 +5,7 @@ import Intro from "./pages/Intro";
 import SoftwarePage from "./pages/SoftwarePage";
 import Foots from "./components/templates/Foots";
 import CulturePage from "./pages/CulturePage";
+import SmartFarm from "./pages/SmartFarm";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/intro" element={<Intro />} />
         <Route path="/culture" element={<CulturePage />} />
         <Route path="/software" element={<SoftwarePage />} />
+        <Route path="/software/smartfarm" element={<SmartFarm />} />
       </Routes>
       <Foots />
     </Router>
