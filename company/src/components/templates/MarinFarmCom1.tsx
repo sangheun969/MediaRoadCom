@@ -33,7 +33,7 @@ const MarinFarmCom1: React.FC = () => {
       />
       {scrolled && (
         <p className="absolute flex justify-center items-center md:bottom-10 md:right-40 text-white text-xl md:text-4xl transition-opacity duration-1000">
-          도심 속 내 텃밭, 스마트폰으로 키우는 미래 농업 체험
+          바다 속
         </p>
       )}
     </div>
