@@ -35,7 +35,7 @@ const IntroBanner3: React.FC = () => {
         className="w-full h-auto max-h-[90vh] object-contain px-4 sm:px-8 md:px-0"
       >
         <source src="/video/videoIntro.mp4" type="video/mp4" />
-        브라우저가 video 태그를 지원하지 않습니다.
+        브라우저가 video 태그를 지원하지 않습니다..
       </video>
     </section>
   );
