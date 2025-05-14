@@ -55,7 +55,7 @@ const Header: React.FC = () => {
           회사소개
         </a>
         <a
-          href="#"
+          href="/"
           onClick={(e) => handleNavClick("/video", e)}
           className="relative before:content-[''] before:absolute before:top-[-10px] before:left-1/2 before:-translate-x-1/2 before:w-2 before:h-2 before:rounded-full before:bg-[#8B4513] before:opacity-0 hover:before:opacity-100 before:transition-opacity"
         >
