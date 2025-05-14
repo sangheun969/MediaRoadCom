@@ -6,6 +6,8 @@ import SoftwarePage from "./pages/SoftwarePage";
 import Foots from "./components/templates/Foots";
 import CulturePage from "./pages/CulturePage";
 import SmartFarm from "./pages/SmartFarm";
+import MarineFarm from "./pages/MarineFarm";
+import RoadPage from "./pages/RoadPage";
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
         <Route path="/culture" element={<CulturePage />} />
         <Route path="/software" element={<SoftwarePage />} />
         <Route path="/software/smartfarm" element={<SmartFarm />} />
+        <Route path="/solfware/marinefarm" element={<MarineFarm />} />
+        <Route path="/roadpage" element={<RoadPage />} />
       </Routes>
       <Foots />
     </Router>

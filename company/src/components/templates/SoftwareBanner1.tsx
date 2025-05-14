@@ -42,7 +42,6 @@ const SoftwareBanner1: React.FC = () => {
           <p className="text-6xl md:text-8xl py-2">개발 분야</p>
         </div>
       )}
-      {/* 중앙 배치 문구 */}
       <div
         className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 transition-all duration-1000 ease-in-out text-center z-10
     ${
@@ -88,7 +87,10 @@ const SoftwareBanner1: React.FC = () => {
             교육장
           </p> */}
         </div>
-        <div className="relative">
+        <div
+          onClick={() => navigate("/solfware/marinefarm")}
+          className="relative"
+        >
           <button
             className={`transition-all duration-1000 ease-in-out font-bold text-2xl bg-cover bg-center bg-no-repeat ${
               scrolled
