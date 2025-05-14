@@ -6,7 +6,7 @@ const KakaoMap: React.FC = () => {
     appkey: process.env.REACT_APP_KAKAOMAP_KEY!,
   });
 
-  if (!isLoaded) return <p>지도를 불러오는 중입니다...</p>;
+  if (!isLoaded) return <p>지도를 불러오는 중입니다..</p>;
 
   return (
     <Map
