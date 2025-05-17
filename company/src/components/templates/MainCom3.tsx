@@ -41,9 +41,9 @@ const MainCom3: React.FC = () => {
             progress >= 1 ? "opacity-100" : "opacity-0"
           }`}
         >
-          <h1 className="text-white text-6xl font-bold">정책</h1>
-          <h1 className="text-white text-6xl font-bold">소통</h1>
-          <h1 className="text-white text-6xl font-bold">전략</h1>
+          <h1 className="text-white text-2xl md:text-6xl font-bold">정책</h1>
+          <h1 className="text-white text-2xl md:text-6xl font-bold">소통</h1>
+          <h1 className="text-white text-2xl md:text-6xl font-bold">전략</h1>
         </div>
       </div>
     </div>
