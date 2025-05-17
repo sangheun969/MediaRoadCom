@@ -41,11 +41,11 @@ const MainCom2: React.FC = () => {
             scrollY > windowHeight ? "opacity-100" : "opacity-0"
           }`}
         >
-          <h1 className="text-white text-2xl md:text-6xl font-bold">개방</h1>
-          <h1 className="text-white text-2xl md:text-6xl font-bold">융합</h1>
-          <h1 className="text-white text-2xl md:text-6xl font-bold">창의성</h1>
-          <h1 className="text-white text-2xl md:text-6xl font-bold">그리고</h1>
-          <h1 className="text-white text-2xl md:text-6xl font-bold">
+          <h1 className="text-white text-4xl md:text-6xl font-bold">개방</h1>
+          <h1 className="text-white text-4xl md:text-6xl font-bold">융합</h1>
+          <h1 className="text-white text-4xl md:text-6xl font-bold">창의성</h1>
+          <h1 className="text-white text-4xl md:text-6xl font-bold">그리고</h1>
+          <h1 className="text-white text-4xl md:text-6xl font-bold">
             협력과 연대
           </h1>
         </div>
