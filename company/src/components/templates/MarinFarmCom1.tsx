@@ -12,7 +12,7 @@ const MarinFarmCom1: React.FC = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
   return (
-    <div className="mt-44 flex flex-col w-full h-[120vh] overflow-hidden transition-all duration-700">
+    <div className="mt-44 flex flex-col w-full h-[120vh] overflow-hidden transition-all duration-700 ">
       <div
         className={`transition-all duration-1000 ease-in-out text-center transform ${
           scrolled
