@@ -37,7 +37,7 @@ const MainCom3: React.FC = () => {
         }}
       >
         <div
-          className={`flex flex-col justify-center pl-36 pb-64 gap-8 h-full transition-opacity duration-500 ${
+          className={`flex flex-col justify-center pl-36 pb-56 gap-8 h-full transition-opacity duration-500 ${
             progress >= 1 ? "opacity-100" : "opacity-0"
           }`}
         >
