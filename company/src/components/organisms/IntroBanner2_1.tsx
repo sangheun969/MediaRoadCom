@@ -27,9 +27,10 @@ const DiagonalReveal: React.FC = () => {
   }, []);
 
   useEffect(() => {
-    const handleScroll = (event: WheelEvent) => {
-      if (!isInView) return;
+    let touchStartY = 0;
+    let touchEndY = 0;
 
+    const openAnimation = () => {
       if (
         !leftRef.current ||
         !rightRef.current ||
@@ -37,36 +38,75 @@ const DiagonalReveal: React.FC = () => {
         !introTextRef.current
       )
         return;
+      leftRef.current.style.transform = "translate(-100%, -100%)";
+      rightRef.current.style.transform = "translate(100%, 100%)";
+      textRef.current.style.opacity = "0";
+      introTextRef.current.style.opacity = "1";
+      introTextRef.current.style.transform = "translateY(0)";
+      setIsOpen(true);
+    };
 
+    const closeAnimation = () => {
+      if (
+        !leftRef.current ||
+        !rightRef.current ||
+        !textRef.current ||
+        !introTextRef.current
+      )
+        return;
+      leftRef.current.style.transform = "translate(0, 0)";
+      rightRef.current.style.transform = "translate(0, 0)";
+      textRef.current.style.opacity = "1";
+      introTextRef.current.style.opacity = "0";
+      introTextRef.current.style.transform = "translateY(50px)";
+      setIsOpen(false);
+    };
+
+    const handleWheel = (event: WheelEvent) => {
+      if (!isInView) return;
       if (event.deltaY > 0 && !isOpen) {
-        leftRef.current.style.transform = "translate(-100%, -100%)";
-        rightRef.current.style.transform = "translate(100%, 100%)";
-        textRef.current.style.opacity = "0";
-        introTextRef.current.style.opacity = "1";
-        introTextRef.current.style.transform = "translateY(0)";
-        setIsOpen(true);
+        openAnimation();
       } else if (event.deltaY < 0 && isOpen) {
-        leftRef.current.style.transform = "translate(0, 0)";
-        rightRef.current.style.transform = "translate(0, 0)";
-        textRef.current.style.opacity = "1";
-        introTextRef.current.style.opacity = "0";
-        introTextRef.current.style.transform = "translateY(50px)";
-        setIsOpen(false);
+        closeAnimation();
       }
     };
 
-    window.addEventListener("wheel", handleScroll, { passive: true });
-    return () => window.removeEventListener("wheel", handleScroll);
+    const handleTouchStart = (event: TouchEvent) => {
+      touchStartY = event.touches[0].clientY;
+    };
+
+    const handleTouchEnd = (event: TouchEvent) => {
+      touchEndY = event.changedTouches[0].clientY;
+      const deltaY = touchStartY - touchEndY;
+
+      if (!isInView) return;
+
+      if (deltaY > 30 && !isOpen) {
+        openAnimation();
+      } else if (deltaY < -30 && isOpen) {
+        closeAnimation();
+      }
+    };
+
+    window.addEventListener("wheel", handleWheel, { passive: true });
+    window.addEventListener("touchstart", handleTouchStart, { passive: true });
+    window.addEventListener("touchend", handleTouchEnd, { passive: true });
+
+    return () => {
+      window.removeEventListener("wheel", handleWheel);
+      window.removeEventListener("touchstart", handleTouchStart);
+      window.removeEventListener("touchend", handleTouchEnd);
+    };
   }, [isOpen, isInView]);
 
   return (
     <section
       ref={containerRef}
-      className="relative w-full h-[200vh] overflow-hidden bg-slate-600"
+      className="relative w-full h-[120vh] md:h-[150vh] overflow-hidden bg-slate-600"
     >
       <div
         ref={leftRef}
-        className="absolute top-0 left-0 w-1/2 h-full bg-[#030303]  z-10 transition-transform duration-1000"
+        className="absolute top-0 left-0 w-1/2 h-full bg-[#030303] z-10 transition-transform duration-1000"
         style={{
           clipPath: "polygon(0 0, 100% 0, 10% 100%, 0% 100%)",
           transform: "translate(0, 0)",
