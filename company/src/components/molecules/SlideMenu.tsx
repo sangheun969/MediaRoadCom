@@ -19,13 +19,21 @@ const SlideMenu: React.FC<SlideMenuProps> = ({ isOpen, toggleMenu }) => {
         <a href="#" onClick={toggleMenu} className="hover:text-blue-500">
           영상콘텐츠
         </a>
-        <a href="#" onClick={toggleMenu} className="hover:text-blue-500">
+        <a
+          href="/software"
+          onClick={toggleMenu}
+          className="hover:text-blue-500"
+        >
           IT 소프트웨어 개발
         </a>
-        <a href="#" onClick={toggleMenu} className="hover:text-blue-500">
+        <a href="/culture" onClick={toggleMenu} className="hover:text-blue-500">
           문화콘텐츠
         </a>
-        <a href="#" onClick={toggleMenu} className="hover:text-blue-500">
+        <a
+          href="/roadpage"
+          onClick={toggleMenu}
+          className="hover:text-blue-500"
+        >
           오시는 길
         </a>
       </nav>
