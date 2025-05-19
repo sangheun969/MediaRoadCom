@@ -42,6 +42,8 @@ const BusinessIntro: React.FC = () => {
               navigate("/software");
             } else if (index === 2) {
               navigate("/culture");
+            } else if (index === 0) {
+              navigate("/video");
             }
           };
 

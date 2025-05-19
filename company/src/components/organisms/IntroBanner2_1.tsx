@@ -102,7 +102,7 @@ const DiagonalReveal: React.FC = () => {
   return (
     <section
       ref={containerRef}
-      className="relative w-full h-[120vh] md:h-[150vh] overflow-hidden bg-slate-600"
+      className="relative w-full h-[100vh] md:h-[130vh] overflow-hidden bg-slate-600"
     >
       <div
         ref={leftRef}
