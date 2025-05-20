@@ -24,7 +24,7 @@ const IntroBanner3: React.FC = () => {
   return (
     <section
       ref={containerRef}
-      className={`w-full h-[120vh] pt-20 flex justify-center items-center transition-colors duration-700 ${
+      className={`w-full h-[100vh] md:h-[120vh] pt-20 flex justify-center items-center transition-colors duration-700 ${
         isInView ? "bg-black" : "bg-slate-600"
       }`}
     >
