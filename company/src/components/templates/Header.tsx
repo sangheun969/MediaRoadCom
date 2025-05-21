@@ -32,7 +32,7 @@ const Header: React.FC = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 w-full max-w-screen overflow-hidden flex items-center justify-between p-4 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 w-full max-w-screen flex items-center justify-between p-4 z-50 transition-all duration-300 ${
         showHeader ? "translate-y-0" : "-translate-y-full"
       } ${isTop ? "bg-transparent" : "bg-white backdrop-blur"}`}
     >

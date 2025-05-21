@@ -10,7 +10,7 @@ const SlideMenu: React.FC<SlideMenuProps> = ({ isOpen, toggleMenu }) => {
     <div
       className={`fixed top-12 right-0 h-full w-full shadow-lg transform transition-transform duration-500 ease-in-out ${
         isOpen ? "translate-x-0" : "translate-x-full"
-      } z-40`}
+      } z-[9999]`}
     >
       <nav className="h-[100vh] flex flex-col justify-center mt-12 space-y-6 gap-8 text-4xl p-6 bg-white">
         <a href="/intro" onClick={toggleMenu} className="hover:text-blue-500 ">
