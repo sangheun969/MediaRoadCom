@@ -32,7 +32,7 @@ const Header: React.FC = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 w-full flex items-center justify-between p-4 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 w-full max-w-screen overflow-hidden flex items-center justify-between p-4 z-50 transition-all duration-300 ${
         showHeader ? "translate-y-0" : "-translate-y-full"
       } ${isTop ? "bg-transparent" : "bg-white backdrop-blur"}`}
     >
@@ -55,7 +55,7 @@ const Header: React.FC = () => {
           회사소개
         </a>
         <a
-          href="/"
+          href="/video"
           onClick={(e) => handleNavClick("/video", e)}
           className="relative before:content-[''] before:absolute before:top-[-10px] before:left-1/2 before:-translate-x-1/2 before:w-2 before:h-2 before:rounded-full before:bg-[#8B4513] before:opacity-0 hover:before:opacity-100 before:transition-opacity"
         >

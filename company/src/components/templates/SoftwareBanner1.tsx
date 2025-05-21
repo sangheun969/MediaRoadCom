@@ -35,7 +35,7 @@ const SoftwareBanner1: React.FC = () => {
           className={`transition-all duration-1000 ease-in-out text-center transform ${
             scrolled
               ? "opacity-0 text-white mt-[400px]"
-              : "opacity-100 text-black mt-10"
+              : "opacity-100 text-black mt-40"
           }`}
         >
           <p className="text-6xl md:text-8xl py-2">IT 소프트웨어</p>

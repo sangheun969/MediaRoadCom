@@ -8,6 +8,7 @@ import CulturePage from "./pages/CulturePage";
 import SmartFarm from "./pages/SmartFarm";
 import MarineFarm from "./pages/MarineFarm";
 import RoadPage from "./pages/RoadPage";
+import VideoProduct from "./pages/VideoProduct";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/software" element={<SoftwarePage />} />
         <Route path="/software/smartfarm" element={<SmartFarm />} />
         <Route path="/solfware/marinefarm" element={<MarineFarm />} />
+        <Route path="/video" element={<VideoProduct />} />
         <Route path="/roadpage" element={<RoadPage />} />
       </Routes>
       <Foots />
