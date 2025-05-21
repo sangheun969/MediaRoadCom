@@ -5,7 +5,7 @@ const KakaoMap: React.FC = () => {
   const isLoaded = useKakaoLoader({
     appkey: process.env.REACT_APP_KAKAOMAP_KEY!,
   });
-
+  console.log("카카오맵 키:", process.env.REACT_APP_KAKAOMAP_KEY);
   if (!isLoaded) return <p>지도를 불러오는 중입니다..</p>;
 
   return (
