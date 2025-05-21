@@ -13,6 +13,11 @@ jobs:
       - name: Checkout source code
         uses: actions/checkout@v3
 
+      - name: Create .env file
+        working-directory: ./company
+        run: |
+          echo "REACT_APP_KAKAOMAP_KEY=${{ secrets.KAKAOMAP_KEY }}" > .env
+
       - name: Install dependencies & build
         working-directory: ./company
         run: |
