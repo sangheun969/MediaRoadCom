@@ -9,10 +9,12 @@ import SmartFarm from "./pages/SmartFarm";
 import MarineFarm from "./pages/MarineFarm";
 import RoadPage from "./pages/RoadPage";
 import VideoProduct from "./pages/VideoProduct";
+import ScrollToTop from "./components/atoms/ScrollToTop";
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Header />
       <Routes>
         <Route path="/" element={<Main />} />
