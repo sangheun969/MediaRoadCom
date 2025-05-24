@@ -1,44 +1,41 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 const MainCom3: React.FC = () => {
-  const [scrollY, setScrollY] = useState(0);
-  const [windowHeight, setWindowHeight] = useState(window.innerHeight);
+  const [visible, setVisible] = useState(false);
+  const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const handleScroll = () => setScrollY(window.scrollY);
-    const handleResize = () => setWindowHeight(window.innerHeight);
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) setVisible(true);
+      },
+      { threshold: 0.3 }
+    );
 
-    window.addEventListener("scroll", handleScroll);
-    window.addEventListener("resize", handleResize);
+    if (sectionRef.current) observer.observe(sectionRef.current);
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("resize", handleResize);
+      if (sectionRef.current) observer.unobserve(sectionRef.current);
     };
   }, []);
 
-  const startScroll = windowHeight;
-  const endScroll = windowHeight * 2;
-
-  const progress = Math.min(
-    Math.max((scrollY - startScroll) / (endScroll - startScroll), 0),
-    1
-  );
-  const visibleHeight = Math.min(progress * windowHeight, windowHeight);
-
   return (
-    <div className="sticky top-0 left-0 w-full h-[100vh] z-20 pointer-events-none overflow-hidden flex flex-col justify-end">
-      <div
-        className="w-full bg-cover bg-center"
-        style={{
-          backgroundImage: "url('/images/background4.png')",
-          height: `${visibleHeight}px`,
-          transition: "height 1s ease-out",
-        }}
-      >
+    <div
+      ref={sectionRef}
+      className="relative w-full h-screen overflow-hidden z-20"
+    >
+      <video
+        className="absolute top-0 left-0 w-full h-full object-cover"
+        src="/video/videoIntro6.mp4"
+        autoPlay
+        loop
+        muted
+        playsInline
+      />
+      <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center md:justify-start z-10">
         <div
-          className={`flex flex-col justify-center pl-36 pb-56 gap-8 h-full transition-opacity duration-500 ${
-            progress >= 1 ? "opacity-100" : "opacity-0"
+          className={`flex flex-col gap-6 md:gap-8 px-6 md:pl-36 pb-20 md:pb-56 text-center md:text-left transition-all duration-1000 ease-out ${
+            visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
           <h1 className="text-white text-4xl md:text-6xl font-bold">정책</h1>
@@ -46,6 +43,7 @@ const MainCom3: React.FC = () => {
           <h1 className="text-white text-4xl md:text-6xl font-bold">전략</h1>
         </div>
       </div>
+      <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-30 z-0" />
     </div>
   );
 };

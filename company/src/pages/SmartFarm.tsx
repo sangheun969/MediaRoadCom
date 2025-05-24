@@ -5,7 +5,7 @@ import SmartFarmCom3 from "../components/templates/SmartFarmCom3";
 
 const SmartFarm: React.FC = () => {
   return (
-    <div className="w-full h-full px-4">
+    <div className="w-full h-full">
       <SmartFarmCom1 />
       <SmartFarmCom3 />
       <SmartFarmCom2 />

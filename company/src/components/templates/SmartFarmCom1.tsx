@@ -1,41 +1,25 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 const SmartFarmCom1: React.FC = () => {
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 100);
-    };
-
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
   return (
-    <div className="mt-44 flex flex-col w-full h-[120vh] overflow-hidden transition-all duration-700">
-      <div
-        className={`transition-all duration-1000 ease-in-out text-center transform ${
-          scrolled
-            ? "translate-y-[500px] md:translate-x-[-30%] text-white"
-            : "translate-y-0 text-black mt-10"
-        }`}
-      >
-        <p className="text-8xl">SMART FARM</p>
-      </div>
-      <img
-        src="/images/background9.png"
-        alt="intro1"
-        className={`mt-20 object-cover transition-all duration-1000 ease-in-out mx-auto ${
-          scrolled
-            ? "w-full h-[100vh] rounded-none "
-            : "w-[300px] h-[300px] rounded-full"
-        }`}
+    <div className="relative w-full h-screen overflow-hidden">
+      <video
+        className="absolute top-0 left-0 w-full h-full object-cover"
+        src="/video/videoIntro3.mp4"
+        autoPlay
+        loop
+        muted
+        playsInline
       />
-      {scrolled && (
-        <p className="absolute flex justify-center items-center md:bottom-10 md:right-40 text-white text-xl md:text-4xl transition-opacity duration-1000">
-          도심 속 내 텃밭, 스마트폰으로 키우는 미래 농업 체험
-        </p>
-      )}
+      <div className="absolute top-0 left-0 w-full h-full flex items-center px-8 md:px-20">
+        <div className="text-white z-10">
+          <h1 className="text-5xl md:text-8xl font-bold mb-6">SMART FARM</h1>
+          <p className="text-xl md:text-4xl">
+            도심 속 내 텃밭, 스마트폰으로 키우는 미래 농업 체험
+          </p>
+        </div>
+      </div>
+      <div className="absolute top-0 left-0 w-full h-full z-0" />
     </div>
   );
 };

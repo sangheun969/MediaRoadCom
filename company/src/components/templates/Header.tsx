@@ -34,7 +34,7 @@ const Header: React.FC = () => {
     <header
       className={`fixed top-0 left-0 right-0 w-full max-w-screen flex items-center justify-between p-4 z-50 transition-all duration-300 ${
         showHeader ? "translate-y-0" : "-translate-y-full"
-      } ${isTop ? "bg-transparent" : "bg-white backdrop-blur"}`}
+      } ${isTop ? "bg-transparent" : "bg-white backdrop-blur text-black"}`}
     >
       <div
         className="flex items-center cursor-pointer"
@@ -46,7 +46,7 @@ const Header: React.FC = () => {
           className="h-14"
         />
       </div>
-      <nav className="hidden md:flex gap-6 text-black text-lg font-medium font-ibmplex">
+      <nav className="hidden md:flex gap-6 text-white text-lg font-medium font-ibmplex">
         <a
           href="/intro"
           onClick={(e) => handleNavClick("/intro", e)}
