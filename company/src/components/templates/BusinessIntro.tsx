@@ -21,11 +21,11 @@ const BusinessIntro: React.FC = () => {
   ];
 
   return (
-    <div className="flex flex-col mt-10">
+    <div className="flex flex-col justify-center min-h-screen">
       <div className="pl-8 h-[100px] flex items-center">
         <h1 className="text-4xl md:text-6xl">Our Business</h1>
       </div>
-      <div className="flex flex-col md:flex-row gap-2 md:h-[700px] transition-all duration-500">
+      <div className="flex flex-col md:flex-row gap-2 md:h-[500px] transition-all duration-500">
         {buttons.map((btn, index) => {
           let flexClass = "w-full";
 
