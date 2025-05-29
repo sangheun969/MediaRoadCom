@@ -1,4 +1,9 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
 import Header from "./components/templates/Header";
 import Main from "./pages/Main";
 import Intro from "./pages/Intro";
@@ -12,8 +17,11 @@ import VideoProduct from "./pages/VideoProduct";
 import ScrollToTop from "./components/atoms/ScrollToTop";
 
 function App() {
+  const location = useLocation();
+  const isMainPage = location.pathname === "/";
+
   return (
-    <Router>
+    <>
       <ScrollToTop />
       <Header />
       <Routes>
@@ -26,8 +34,8 @@ function App() {
         <Route path="/video" element={<VideoProduct />} />
         <Route path="/roadpage" element={<RoadPage />} />
       </Routes>
-      <Foots />
-    </Router>
+      {!isMainPage && <Foots />}
+    </>
   );
 }
 

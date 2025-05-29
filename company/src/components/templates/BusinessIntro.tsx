@@ -21,7 +21,7 @@ const BusinessIntro: React.FC = () => {
   ];
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col mt-10">
       <div className="pl-8 h-[100px] flex items-center">
         <h1 className="text-4xl md:text-6xl">Our Business</h1>
       </div>

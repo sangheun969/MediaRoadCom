@@ -10,3 +10,38 @@
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
+
+/* @font-face {
+  font-family: "Pretendard";
+  src: url("/fonts/IBM_Plex_Sans_KR/Pretendard-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("/fonts/IBM_Plex_Sans_KR/Pretendard-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("/fonts/IBM_Plex_Sans_KR/Pretendard-SemiBold.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("/fonts/IBM_Plex_Sans_KR/Pretendard-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("/fonts/IBM_Plex_Sans_KR/Pretendard-Black.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+} */

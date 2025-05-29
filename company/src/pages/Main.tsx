@@ -1,6 +1,4 @@
-// C:\Users\ASUS\project\404\test\MediaRaod\company\src\pages\Main.tsx
-
-import React from "react";
+import React, { useEffect } from "react";
 import MainCom1 from "../components/templates/MainCom1";
 import MainCom2 from "../components/templates/MainCom2";
 import MainCom3 from "../components/templates/MainCom3";
@@ -11,6 +9,14 @@ import Fullpage, {
 } from "@ap.cx/react-fullpage";
 
 const Main: React.FC = () => {
+  useEffect(() => {
+    return () => {
+      // react-fullpage가 내부에서 설정한 DOM 상태 제거
+      const root = document.querySelector(".apcx-fullpage");
+      root?.parentElement?.removeChild(root);
+    };
+  }, []);
+
   return (
     <Fullpage>
       <FullPageSections>
