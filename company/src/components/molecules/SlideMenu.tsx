@@ -8,7 +8,7 @@ interface SlideMenuProps {
 const SlideMenu: React.FC<SlideMenuProps> = ({ isOpen, toggleMenu }) => {
   return (
     <div
-      className={`fixed top-12 right-0 h-full w-full shadow-lg transform transition-transform duration-500 ease-in-out ${
+      className={`fixed top-12 right-0 h-full w-full shadow-lg transform transition-transform duration-500 ease-in-out text-black ${
         isOpen ? "translate-x-0" : "translate-x-full"
       } z-[9999]`}
     >
