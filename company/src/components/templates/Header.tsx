@@ -32,7 +32,7 @@ const Header: React.FC = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 w-full max-w-screen flex items-center justify-between p-4 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 w-screen flex items-center justify-between p-4 z-20 transition-all duration-300 ${
         showHeader ? "translate-y-0" : "-translate-y-full"
       } ${
         isTop ? "bg-black/40 text-white" : "bg-white text-black backdrop-blur"
@@ -49,7 +49,7 @@ const Header: React.FC = () => {
         />
       </div>
       <nav
-        className={`hidden md:flex gap-6 transition-colors duration-300 font-sans font-bold text-xl ${
+        className={`hidden md:flex gap-6 transition-colors duration-300 font-sans font-bold text-xl pr-6 ${
           isTop ? "text-white" : "text-black"
         }`}
       >
@@ -90,7 +90,7 @@ const Header: React.FC = () => {
         </a>
       </nav>
 
-      <div className="flex items-center md:hidden">
+      <div className="flex items-center md:hidden pr-3">
         <HamburgBar />
       </div>
     </header>
